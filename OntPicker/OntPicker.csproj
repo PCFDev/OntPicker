@@ -36,6 +36,7 @@
   <ItemGroup>
     <Compile Include="BioOntModel\BioOntProject.cs" />
     <Compile Include="BioOntModel\Ontology.cs" />
+    <Compile Include="BioOntModel\Ontpage.cs" />
     <Compile Include="OntPickerClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

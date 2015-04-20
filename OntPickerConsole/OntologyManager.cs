@@ -9,9 +9,9 @@ namespace OntPickerConsole
     {
         private OntPickerClient _ontPicker;
 
-        public async Task ProcessOntology(string ontology, string apiKey)
+        public async Task ProcessOntology(string ontology, string apiKey, string root, int hLevel)
         {
-            this._ontPicker = new OntPicker.OntPickerClient(ontology, apiKey);
+            this._ontPicker = new OntPicker.OntPickerClient(ontology, apiKey, root, hLevel);
 
             var x = await this._ontPicker.GetRootsAsync();
         }
