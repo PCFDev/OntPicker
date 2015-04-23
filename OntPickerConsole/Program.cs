@@ -10,13 +10,15 @@ namespace OntPickerConsole
             // Testing ----
             string ontology = "CPT";
             int hLevel = 3; // \i2b2(0)\Procedures(1)\!!!!(2)
-            string root = @"\i2b2\Procedures\CPT\"; // for procedures
+            string root = "\\i2b2\\Procedures\\CPT"; // for procedures
             string apiKey = "f2e61f58-a80e-4b80-941a-6a19c0fcf8cc"; // My APIKEY
+            int smushLevel = 2;
             // ---- Testing
+            
+            OntologyManager manager = new OntologyManager();
 
-            OntologyManager manager = new OntologyManager();            
-
-            manager.ProcessOntology(ontology, apiKey, root, hLevel).ContinueWith(t =>
+            // uses default temp tables for Ontology: Base_Ontology and for Concepts: Base_Concepts
+            manager.GatherOntology(ontology, apiKey, root, hLevel, smushLevel).ContinueWith(t =>
                 {
                     if (t.Exception != null)
                         Console.WriteLine(t.Exception.Message);
