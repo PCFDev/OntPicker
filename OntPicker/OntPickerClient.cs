@@ -89,8 +89,8 @@ namespace OntPicker
         private async Task ProcessOntNode(Ontology node, int hLevel, string previousLevel)
         {
             // testing
-            if (thisOnt.Count > 50)
-                return;
+            //if (thisOnt.Count > 50)
+            //    return;
 
             int c_hlevel = hLevel;
             string id = MaskId(node.id);
